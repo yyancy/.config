@@ -1,18 +1,28 @@
 # source aliases file
 DT_HOME="$HOME/.config/shell"
-if [ -f "$DT_HOME/aliases.sh" ]; then 
-	. $DT_HOME/aliases
+if [ -f "$DT_HOME/aliases" ]; then 
+	. "$DT_HOME"/aliases
 fi
 
 # source functions file
 
-if [ -f "$DT_HOME/functions.sh" ]; then 
-	. $DT_HOME/functions
+if [ -f "$DT_HOME/functions" ]; then 
+	. "$DT_HOME"/functions
 fi
 
 
 
 [ -x "$(command -v thefuck)" ] && eval $(thefuck --alias)
+
+
+
+# add go relevant configurations
+if [ -x "$(command -v go )" ]; then
+  export PATH=$PATH:/usr/local/go/bin
+  export GOPROXY=https://goproxy.io,direct
+  export GO111MODULE="on"
+  export GOPATH="$HOME/.cache/go"
+fi
 
 
 # add path

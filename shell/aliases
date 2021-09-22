@@ -8,7 +8,7 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
 
-alias mkdir='mkdir -pv'
+alias mk='mkdir -pv'
 alias vi='nvim'
 alias nv='nvim'
 alias sudo='sudo '
