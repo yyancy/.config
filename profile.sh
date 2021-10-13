@@ -23,10 +23,12 @@ if [ -x "$(command -v go )" ]; then
   export GO111MODULE="on"
   export GOPATH="$HOME/.cache/go"
 fi
-
+# define relevant variables
+export GIT_SSL_NO_VERIFY=1
 
 # add path
 PATH="/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/lib/nodejs/node/bin:$PATH"
 PATH="$HOME/.jdks/jdk/bin:$PATH"
 PATH="$PATH:/opt/maven/bin"
 
@@ -37,4 +39,8 @@ export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 
 
 
+# execute some other extra work
+
+# switch Esc key and Caps key
+xmodmap .Xmodmap
 

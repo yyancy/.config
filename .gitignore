@@ -5,3 +5,5 @@
 !.gitignore
 !shell/
 !cheatsheets/
+!.tmux.conf
+!.Xmodmap

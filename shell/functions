@@ -1,0 +1,5 @@
+
+
+function mydiff() {
+  diff -u $@ | diff-so-fancy
+}
