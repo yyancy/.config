@@ -31,6 +31,12 @@ PATH="/usr/local/mysql/bin:$PATH"
 PATH="/usr/local/lib/nodejs/node/bin:$PATH"
 PATH="$HOME/.jdks/jdk/bin:$PATH"
 PATH="$PATH:/opt/maven/bin"
+PATH="$HOME/.yarn/bin:$PATH"
+
+export PATH=$HOME/.local/bin:$PATH
+VERSION=v14.18.0
+DISTRO=linux-x64
+export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 
 # remove duplicate items
