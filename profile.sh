@@ -12,7 +12,7 @@ fi
 
 
 
-[ -x "$(command -v thefuck)" ] && eval $(thefuck --alias)
+[ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
 
 
 
@@ -40,7 +40,7 @@ export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 
 # remove duplicate items
-export PATH=`echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}'`
+export PATH=$( echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}' )
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 
 
@@ -49,4 +49,4 @@ export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 
 # switch Esc key and Caps key
 # [ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
-[ -x $(command -v setxkbmap) ] && setxkbmap -option caps:swapescape
+[ -x "$(command -v setxkbmap)" ] && setxkbmap -option caps:swapescape
