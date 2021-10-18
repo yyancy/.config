@@ -48,5 +48,5 @@ export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 # execute some other extra work
 
 # switch Esc key and Caps key
-[ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
-
+# [ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
+[ -x $(command -v setxkbmap) ] && setxkbmap -option caps:swapescape
