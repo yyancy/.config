@@ -1,13 +1,17 @@
 # source aliases file
 DT_HOME="$HOME/.config/shell"
-if [ -f "$DT_HOME/aliases" ]; then 
-	. "$DT_HOME"/aliases
+if [ -f "$DT_HOME/aliases.sh" ]; then 
+	. "$DT_HOME"/aliases.sh
 fi
 
 # source functions file
 
-if [ -f "$DT_HOME/functions" ]; then 
-	. "$DT_HOME"/functions
+if [ -f "$DT_HOME/functions.sh" ]; then 
+	. "$DT_HOME"/functions.sh
+fi
+
+if [ -f "$DT_HOME/env.sh" ]; then 
+	. "$DT_HOME"/env.sh
 fi
 
 

@@ -22,3 +22,8 @@ source ~/.zplug/init.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug load --verbose
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -Uz compinit bashcompinit
+compinit
+bashcompinit
+source ~/.bash_completion.d/compleat_setup
