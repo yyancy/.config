@@ -7,3 +7,8 @@ function mydiff() {
 function hh () {
   "$1" --help
 }
+
+
+function vv () {
+  "$1" --version
+}
