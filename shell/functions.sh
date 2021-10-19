@@ -10,5 +10,13 @@ function hh () {
 
 
 function vv () {
-  "$1" --version
+  params=("--version" "-version" "version")
+  for p in "${params[@]}" ; do
+    output="$($1 $p 2>&1)"
+    if [ "$?" -eq "0" ]; then
+      echo $output
+      break
+    fi
+  done
+
 }
