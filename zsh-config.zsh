@@ -12,6 +12,15 @@ zsh-syntax-highlighting
 dirhistory
 npm
 sudo
+systemadmin
+systemd
+tmux
+alias-finder
+aliases
+copybuffer
+copydir
+copyfile
+jsontools
 )
 
 
@@ -26,4 +35,8 @@ zplug load --verbose
 autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
-source ~/.bash_completion.d/compleat_setup
+# source ~/.bash_completion.d/compleat_setup
+
+
+# tmux configuration
+export ZSH_TMUX_AUTOSTART=true

@@ -4,6 +4,7 @@
 !profile.sh
 !.gitignore
 !shell/
+!alacritty/
 !cheatsheets/
 !.tmux.conf
 !.Xmodmap
