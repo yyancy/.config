@@ -16,7 +16,6 @@ systemadmin
 systemd
 tmux
 alias-finder
-aliases
 copybuffer
 copydir
 copyfile
@@ -29,7 +28,7 @@ jsontools
 source ~/.zplug/init.zsh
 # plugins 
 zplug "b4b4r07/enhancd", use:init.sh
-zplug load --verbose
+zplug load
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -Uz compinit bashcompinit
