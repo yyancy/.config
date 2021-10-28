@@ -20,6 +20,7 @@ copybuffer
 copydir
 copyfile
 jsontools
+common-aliases
 )
 
 
