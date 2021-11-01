@@ -1,6 +1,7 @@
 plugins=(
 git
 extract
+fzf-tab 
 command-not-found
 compleat
 colored-man-pages
@@ -21,6 +22,7 @@ copydir
 copyfile
 jsontools
 common-aliases
+# zsh-autocomplete
 )
 
 
