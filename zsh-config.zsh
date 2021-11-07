@@ -41,4 +41,5 @@ bashcompinit
 
 
 # tmux configuration
+export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
 export ZSH_TMUX_AUTOSTART=true

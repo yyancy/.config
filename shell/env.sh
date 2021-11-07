@@ -20,3 +20,4 @@ export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 # remove duplicate items
 export PATH=$( echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}' )
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
+export XDG_CONFIG_HOME="$HOME/.config"
