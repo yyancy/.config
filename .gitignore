@@ -6,7 +6,9 @@
 !shell/
 !alacritty/
 !cheatsheets/
-!.tmux.conf
+!/tmux/
+/tmux/*
+!/tmux/tmux.conf
 !.Xmodmap
 !.tasks.ini
 !zsh-config.zsh
