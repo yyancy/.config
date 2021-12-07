@@ -12,3 +12,4 @@
 !.Xmodmap
 !.tasks.ini
 !zsh-config.zsh
+!stow-global-ignore
