@@ -95,3 +95,5 @@ key_bindings:
   - { key: N,      mods: Command|Shift,            action: SpawnNewInstance }
   - { key: Q,      mods: Command|Shift,            action: Quit  }
   - { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  - { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  - { key: A,        mods: Control|Shift, chars: "\x1b[65;5u"                }
