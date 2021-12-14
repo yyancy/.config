@@ -25,7 +25,6 @@ function pathappend () {
         export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
 }
 
-export -f pathremove pathprepend pathappend
 
 function mydiff() {
   diff -u $@ | diff-so-fancy
