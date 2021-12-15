@@ -7,6 +7,9 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
+alias ls='exa'
+alias ll='exa -l'
+alias l='exa -l'
 
 alias mk='mkdir -pv'
 alias sudo='sudo '
