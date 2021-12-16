@@ -11,6 +11,10 @@ alias ls='exa'
 alias ll='exa -l'
 alias l='exa -l'
 
+alias os="cat /etc/redhat-release"
+alias myip='ip -br -c a'
+alias mem="free -h"
+
 alias mk='mkdir -pv'
 alias sudo='sudo '
 alias cls='clear'
