@@ -10,7 +10,6 @@ export GOPATH="$HOME/.cache/go"
 
 # add path
 PATH="/usr/local/mysql/bin:$PATH"
-PATH="$HOME/.jdks/jdk/bin:$PATH"
 PATH="/opt/maven/bin:$PATH"
 PATH="$HOME/.yarn/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
