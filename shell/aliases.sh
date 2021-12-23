@@ -35,3 +35,10 @@ alias ssudo='sudo -E env "PATH=$PATH"'
 alias g28='iconv -f gbk -t utf-8'
 
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vi="nvim" nv="nvim" vimdiff="nvim -d"
+
+# extension aliases
+alias -s txt=nvim
+
+
+# unset some aliases
+unalias duf
