@@ -1,27 +1,27 @@
 plugins=(
-git
+alias-finder
+autojump
+colored-man-pages
+colorize
+command-not-found
+common-aliases
+compleat
+copybuffer
+copydir
+copyfile
+cp
+dirhistory
 extract
 fzf-tab 
-command-not-found
-compleat
-colored-man-pages
-cp
-colorize
-autojump
-zsh-autosuggestions
-zsh-syntax-highlighting 
-dirhistory
+git
+jsontools
 npm
 sudo
 systemadmin
 systemd
 tmux
-alias-finder
-copybuffer
-copydir
-copyfile
-jsontools
-common-aliases
+zsh-autosuggestions
+zsh-syntax-highlighting 
 # zsh-autocomplete
 )
 
@@ -39,6 +39,10 @@ compinit
 bashcompinit
 # source ~/.bash_completion.d/compleat_setup
 
+# plugins configurations
+#
+# aliases-finder
+ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # tmux configuration
 export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
