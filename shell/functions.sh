@@ -31,12 +31,12 @@ function mydiff() {
 }
 
 function hh () {
-  "$1" --help
+  "$1" --help | less --incsearch --ignore-case
 }
 
 
 function vv () {
-  params=("--version" "-version" "version")
+  params=("--version" "-version" "version" "-v")
   for p in "${params[@]}" ; do
     output="$($1 $p 2>&1)"
     if [ "$?" -eq "0" ]; then
@@ -46,6 +46,53 @@ function vv () {
   done
 
 }
+
+function o() {
+  xdg-open "$@" &> /dev/null
+}
+
+function type() {
+  CMD="$(command -v "$@")"
+  echo "$CMD"
+  while [[ -L "$CMD" ]]; do
+    CMD="$(readlink "$CMD")"
+    CMD="$(command -v "$CMD")"
+    echo "$CMD"
+  done
+  vv "$CMD"
+}
+
+# apt wrapper function
+function a() {
+  NAME="$0"
+  USAGE="usage: $NAME [install | update | remove] {package}"
+  if [ $# -eq 0 ]; then
+    echo $UESGE
+    return 1
+  fi
+  if [ "$1" != "" ]; then
+    case $1 in
+      install|update|remove )
+        CMD="$1"
+        if [ "$2" = "" ]; then
+          echo "must supply a package"
+          echo -e "$NAME install ${Red}package"
+          return 1
+        fi
+        shift
+        ACTION=$CMD
+        if [ "$CMD" = "update" ]; then
+          ACTION="install --only-upgrade"
+        fi
+        eval "sudo apt $ACTION $*"
+         ;;
+      -h|help|*)   
+        echo $USAGE
+         ;;
+    esac
+  fi
+}
+
 function af() {
   alias-finder -l "$@"
 }

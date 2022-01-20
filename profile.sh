@@ -1,12 +1,15 @@
 # source aliases file
 SHELL_HOME="$HOME/.config/shell"
 # shellcheck source=/dev/null
+source "$SHELL_HOME/color.sh"
+# shellcheck source=/dev/null
 source "$SHELL_HOME/aliases.sh"
 # shellcheck source=/dev/null
 source "$SHELL_HOME/functions.sh"
 # shellcheck source=/dev/null
 source "$SHELL_HOME/env.sh"
 
+source "$SHELL_HOME/bashmarks.sh"
 [ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
 
 
@@ -18,4 +21,4 @@ export GIT_SSL_NO_VERIFY=1
 
 # switch Esc key and Caps key
 # [ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
-[ -x "$(command -v setxkbmap)" ] && setxkbmap -option caps:swapescape
+# [ -x "$(command -v setxkbmap)" ] && setxkbmap -option caps:swapescape
