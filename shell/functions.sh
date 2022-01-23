@@ -34,6 +34,10 @@ function hh () {
   "$1" --help | less --incsearch --ignore-case
 }
 
+# create directory and enter it
+function mkc () {
+  mkdir -pv "$@" && cd "$_"
+}
 
 function vv () {
   params=("--version" "-version" "version" "-v")
