@@ -1,11 +1,17 @@
 # Functions to help us manage paths.  Second argument is the name of the
 # path variable to be modified (default: PATH)
+
+# set spliting words automatically
+if [ "$ZSH_VERSION" ]; then
+  setopt sh_word_split
+fi
+
 function pathremove () {
   local IFS=':'
   local NEWPATH
   local DIR
   local PATHVARIABLE=${2:-PATH}
-  for DIR in ${!PATHVARIABLE} ; do
+  for DIR in ${(P)PATHVARIABLE} ; do
     if [ "$DIR" != "$1" ] ; then
       NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
     fi
@@ -16,13 +22,13 @@ function pathremove () {
 function pathprepend () {
   pathremove $1 $2
   local PATHVARIABLE=${2:-PATH}
-  export $PATHVARIABLE="$1${!PATHVARIABLE:+:${!PATHVARIABLE}}"
+  export $PATHVARIABLE="$1${(P)PATHVARIABLE:+:${(P)PATHVARIABLE}}"
 }
 
 function pathappend () {
   pathremove $1 $2
   local PATHVARIABLE=${2:-PATH}
-  export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
+  export $PATHVARIABLE="${(P)PATHVARIABLE:+${(P)PATHVARIABLE}:}$1"
 }
 
 
@@ -89,10 +95,10 @@ function a() {
           ACTION="install --only-upgrade"
         fi
         eval "sudo apt $ACTION $*"
-         ;;
-      -h|help|*)   
+        ;;
+      -h|help|*)
         echo $USAGE
-         ;;
+        ;;
     esac
   fi
 }
