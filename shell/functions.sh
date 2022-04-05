@@ -36,7 +36,7 @@ function mydiff() {
   diff -u $@ | diff-so-fancy
 }
 
-function hh () {
+function hp () {
   "$1" --help | less --incsearch --ignore-case
 }
 

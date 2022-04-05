@@ -35,6 +35,8 @@ alias ssudo='sudo -E env "PATH=$PATH"'
 
 alias g28='iconv -f gbk -t utf-8'
 alias fd='fdfind'
+alias less='less --incsearch --ignore-case'
+alias man='man -P "less --incsearch --ignore-case"'
 
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vi="nvim" nv="nvim" vimdiff="nvim -d"
 [ -x "$(command -v trash-put)" ] && alias trp="trash-put"
