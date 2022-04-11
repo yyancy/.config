@@ -13,3 +13,4 @@
 !.tasks.ini
 !zsh-config.zsh
 !stow-global-ignore
+!tmuxinator/
