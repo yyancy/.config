@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Idea
+Icon=/home/yancy/opt/idea/bin/idea.svg
+Exec="/home/yancy/opt/idea/bin/idea.sh" %f
+Comment=A cross-platform IDE for Java
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-java

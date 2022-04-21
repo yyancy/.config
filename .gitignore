@@ -14,3 +14,7 @@
 !zsh-config.zsh
 !stow-global-ignore
 !tmuxinator/
+!aria2/
+!applications/
+!scripts/
+!resources/

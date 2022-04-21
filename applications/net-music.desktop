@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=net music
+Comment=net music
+Keywords=mp3
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Application;
+Exec=/home/yancy/opt/YesPlayMusic-0.4.3.AppImage %F

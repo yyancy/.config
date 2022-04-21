@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=myQv2ray
+Icon=/home/yancy/opt/idea/bin/idea.svg
+Exec=/home/yancy/opt/Qv2ray.v2.6.3.linux-x64.AppImage %f
+Comment=Qv2ray
+Categories=Development;
+Terminal=false

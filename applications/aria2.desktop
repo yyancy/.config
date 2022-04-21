@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=aria2
+Exec="/home/yancy/.config/aria2/start-ariaD.sh" 
+Comment=Download tool
+Categories=Download tools;
+Terminal=false
+StartupWMClass=Utils

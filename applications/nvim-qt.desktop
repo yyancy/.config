@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=nvim-qt
+Icon=/home/yancy/opt/idea/bin/idea.svg
+Exec=/usr/bin/nvim-qt %f
+Comment=GUI for nvim
+Categories=Development;
+Terminal=false

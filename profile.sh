@@ -22,3 +22,19 @@ export GIT_SSL_NO_VERIFY=1
 # switch Esc key and Caps key
 # [ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
 # [ -x "$(command -v setxkbmap)" ] && setxkbmap -option caps:swapescape
+
+# some stuffs
+
+# command line history tool
+# HSTR configuration - add this to ~/.zshrc
+[ -x "$(command -v hstr)" ] && {
+  alias hh=hstr                    # hh to be alias for hstr
+  setopt histignorespace           # skip cmds w/ leading space from history
+  export HSTR_CONFIG=hicolor       # get more colors
+  bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+}
+
+# 21century learning usage
+go_libs="-lm"
+go_flags="-g -Wall -include allheads.h -O3"
+alias go_c="c99 -xc - $go_libs $go_flags"
