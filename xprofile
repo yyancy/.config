@@ -4,5 +4,4 @@ export XMODIFIERS="@im=fcitx"
 
 setxkbmap -option
 setxkbmap -option ctrl:nocaps
-setxkbmap -option shift:both_capslock
 xcape -e 'Control_L=Escape'
