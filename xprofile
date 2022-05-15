@@ -1,0 +1,8 @@
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+setxkbmap -option
+setxkbmap -option ctrl:nocaps
+setxkbmap -option shift:both_capslock
+xcape -e 'Control_L=Escape'
