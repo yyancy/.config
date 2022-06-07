@@ -3,11 +3,11 @@ SHELL_HOME="$HOME/.config/shell"
 # shellcheck source=/dev/null
 source "$SHELL_HOME/color.sh"
 # shellcheck source=/dev/null
-source "$SHELL_HOME/aliases.sh"
-# shellcheck source=/dev/null
 source "$SHELL_HOME/functions.sh"
 # shellcheck source=/dev/null
 source "$SHELL_HOME/env.sh"
+# shellcheck source=/dev/null
+source "$SHELL_HOME/aliases.sh"
 
 source "$SHELL_HOME/bashmarks.sh"
 [ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
