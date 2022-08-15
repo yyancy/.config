@@ -7,12 +7,12 @@ command-not-found
 common-aliases
 compleat
 copybuffer
-copydir
+copypath
 copyfile
 cp
 dirhistory
 extract
-fzf-tab 
+# fzf
 git
 jsontools
 npm

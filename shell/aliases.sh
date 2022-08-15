@@ -10,7 +10,7 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
-alias ls='exa -s=extension'
+has exa && alias ls='exa -s=extension'
 alias ll='ls -l'
 alias l='ls -l'
 
