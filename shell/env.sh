@@ -9,7 +9,7 @@ export GO111MODULE="on"
 export GOPATH="$HOME/.cache/go"
 
 # add path
-pathprepend "$HOME/.cache/go/bin/"
+pathprepend "$HOME/.cache/go/bin"
 pathprepend "$HOME/.yarn/bin"
 pathprepend "$HOME/.local/bin"
 pathprepend "/opt/maven/bin"
