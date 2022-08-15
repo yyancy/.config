@@ -12,7 +12,7 @@ copyfile
 cp
 dirhistory
 extract
-fzf-tab 
+# fzf
 git
 jsontools
 npm

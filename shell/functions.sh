@@ -30,7 +30,10 @@ function pathappend () {
   local PATHVARIABLE=${2:-PATH}
   export $PATHVARIABLE="${(P)PATHVARIABLE:+${(P)PATHVARIABLE}:}$1"
 }
-
+# determine whether given command exists
+function has(){
+	command -v $@ &>/dev/null
+}
 
 function mydiff() {
   diff -u $@ | diff-so-fancy
