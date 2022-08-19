@@ -39,8 +39,8 @@ alias less='less --incsearch --ignore-case'
 alias man='man -P "less --incsearch --ignore-case"'
 alias mux='tmuxinator'
 
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vi="nvim" nv="nvim" vimdiff="nvim -d"
-[ -x "$(command -v trash-put)" ] && alias trp="trash-put"
+has nvim && alias vim="nvim" vi="nvim" nv="nvim" vimdiff="nvim -d"
+has trash-put && alias trp="trash-put"
 
 # extension aliases
 alias -s txt=nvim
