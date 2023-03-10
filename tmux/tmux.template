@@ -67,6 +67,9 @@ bind C-f command-prompt -p find-session 'switch-client -t %%'
 # execute commands in multiple panes simultaneously
 bind C-s set-window-option synchronize-panes
 
+# Active window title color
+setw -g window-status-current-style fg=black,bg=white
+
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
