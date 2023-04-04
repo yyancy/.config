@@ -16,6 +16,8 @@ set-option -g status-keys vi
 # Setting the prefix from C-b to C-a
 set -g prefix C-a
 
+set-option -g renumber-windows on
+
 # Ensure that we can send Ctrl-A to other apps
 bind C-a send-prefix
 
@@ -69,6 +71,18 @@ bind C-s set-window-option synchronize-panes
 
 # Active window title color
 setw -g window-status-current-style fg=black,bg=white
+
+bind -T copy-mode    C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
+bind -T copy-mode-vi C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
+bind -n C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+unbind-key -T copy-mode-vi MouseDragEnd1Pane
+# Make double and triple click work outside of copy mode (already works inside it with default bindings).
+bind-key -T root DoubleClick1Pane if-shell -Ft'{mouse}' '#{alternate_on}' "send-keys -M" "copy-mode -t'{mouse}'; send-keys -t'{mouse}' -X select-word"
+bind-key -T root TripleClick1Pane if-shell -Ft'{mouse}' '#{alternate_on}' "send-keys -M" "copy-mode -t'{mouse}'; send-keys -t'{mouse}' -X select-line"
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-no-clear pbcopy
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-no-clear pbcopy
+
 
 
 # List of plugins
