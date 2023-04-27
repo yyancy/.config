@@ -60,6 +60,12 @@ bind -r L resize-pane -R 5
 
 # set -g mouse on
 bind-key m set-option -g mouse \; display "Mouse: #{?mouse,ON,OFF}"
+
+set -g mouse on
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+
 # create session
 bind C-c new-session
 # find session
