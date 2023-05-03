@@ -45,11 +45,11 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # enhancd 
-export ENHANCD_HOOK_AFTER_CD=ll
+# export ENHANCD_HOOK_AFTER_CD=ll
 
 # tmux configuration
 export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
-export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_AUTOSTART=true
 
 # per-directory-history
 export HISTORY_BASE=$HOME/.cache/directory_history
