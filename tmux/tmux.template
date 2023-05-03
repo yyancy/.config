@@ -1,0 +1,109 @@
+# reminder
+# prefix !  create a new window from a pane
+# prefix z  maximux the pane
+# prefix s show all sessions
+# prefix ( previous session
+# prefix ) next session
+# prefix . move window from one session to another
+
+# Set the default terminal mode to 256color mode
+set -g default-terminal "screen-256color"
+set-option -sa terminal-overrides ',screen-256color:RGB'
+# enable vi keys.
+# prefix + [ enter vi mode
+setw -g mode-keys vi
+set-option -g status-keys vi
+# Setting the prefix from C-b to C-a
+set -g prefix C-a
+
+set-option -g renumber-windows on
+
+# Ensure that we can send Ctrl-A to other apps
+bind C-a send-prefix
+
+#setting the delay between prefix and command
+set -s escape-time 1
+
+# Set the base index for windows to 1 instead of 0
+set -g base-index 1
+
+# Set the base index for panes to 1 instead of 0
+setw -g pane-base-index 1
+
+# edit and reload tmux configuration quickly
+bind r source-file ~/.config/tmux/tmux.conf \; display-message "~/.config/tmux/tmux.conf reloaded"
+
+# splitting panes with | and -
+# vim-tmux-navigator use current mapping
+# bind \ split-window -h
+bind _ split-window -v
+# split pane and retain the current directory of existing pane
+bind - split-window -v -c "#{pane_current_path}"
+bind |  split-window -h -c "#{pane_current_path}"
+
+# moving between panes with Prefix h,j,k,l
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+
+# Quick window selection
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# resize pane
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# set -g mouse on
+bind-key m set-option -g mouse \; display "Mouse: #{?mouse,ON,OFF}"
+
+set -g mouse on
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+
+# create session
+bind C-c new-session
+# find session
+bind C-f command-prompt -p find-session 'switch-client -t %%'
+
+# shortcut for synchronize-panes toggle
+# execute commands in multiple panes simultaneously
+bind C-s set-window-option synchronize-panes
+
+# Active window title color
+setw -g window-status-current-style fg=black,bg=white
+
+bind -T copy-mode    C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
+bind -T copy-mode-vi C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
+bind -n C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+unbind-key -T copy-mode-vi MouseDragEnd1Pane
+# Make double and triple click work outside of copy mode (already works inside it with default bindings).
+bind-key -T root DoubleClick1Pane if-shell -Ft'{mouse}' '#{alternate_on}' "send-keys -M" "copy-mode -t'{mouse}'; send-keys -t'{mouse}' -X select-word"
+bind-key -T root TripleClick1Pane if-shell -Ft'{mouse}' '#{alternate_on}' "send-keys -M" "copy-mode -t'{mouse}'; send-keys -t'{mouse}' -X select-line"
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-no-clear pbcopy
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-no-clear pbcopy
+
+
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+
+
+set -g @plugin 'https://gitee.com/yyancyer/tmux-tilish.git'
+set -g @tilish-navigator 'on'
+set -g @plugin 'https://gitee.com/yyancyer/vim-tmux-navigator.git'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
