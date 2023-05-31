@@ -1,37 +1,41 @@
+# My zsh custom configurations
+#
+# Theme: powerlevel10k/powerlevel10k
+
+
 plugins=(
-alias-finder
-autojump
+aliases
 colored-man-pages
-colorize
 command-not-found
-common-aliases
-compleat
+# common-aliases
+# compleat
 copybuffer
 copypath
 copyfile
-cp
-dirhistory
 extract
+# dirhistory
 # fzf
 git
-jsontools
-npm
-sudo
+# jsontools
+# npm
+# sudo
 systemadmin
 systemd
 tmux
 zsh-autosuggestions
 zsh-syntax-highlighting 
-per-directory-history
+# per-directory-history
 # zsh-autocomplete
 )
+
+# install zsh-completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # install plugins with zplug
 source ~/.zplug/init.zsh
 
 # plugins 
-zplug "b4b4r07/enhancd", use:init.sh
-
+# zplug "b4b4r07/enhancd", use:init.sh
 zplug load
 
 #
@@ -53,3 +57,8 @@ export ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
 
 # per-directory-history
 export HISTORY_BASE=$HOME/.cache/directory_history
+
+
+bindkey '^[' vi-cmd-mode
+# bindkey -A emacs main
+# bindkey -M viins 'jj' vi-cmd-mode

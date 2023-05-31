@@ -48,4 +48,4 @@ alias -s md=typora
 alias -s pdf=FoxitReader
 
 # unset some aliases
-unalias duf
+# unalias duf
