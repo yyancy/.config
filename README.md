@@ -30,6 +30,12 @@ autoload -U compinit && compinit -u
 
 ```
 
+## Initialize a new environment
+``` bash
+curl -fsSL https://gitee.com/yyancyer/config/raw/master/init_basic_dev_env.sh -o init_basic.sh
+bash init_basic.sh
+```
+
 ## install tmux and plugins
 As of tmux3.1, the configuration location of tmux is in `.config/tmux/tmux.conf`
 first, install tmux version above 3.1.
