@@ -52,7 +52,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 later, using `C-a I` to install plugins
 
-
+### Tmux tips
+```bash
+# prefix l go to previous window
+# prefix ; go to previous pane
+# A-S-c reload config
+bind l last-window
+```
 
 ## install homebrew
 ### install dependancies
