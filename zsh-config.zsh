@@ -24,7 +24,7 @@ systemd
 tmux
 zsh-autosuggestions
 zsh-syntax-highlighting 
-# per-directory-history
+per-directory-history
 # zsh-autocomplete
 )
 
