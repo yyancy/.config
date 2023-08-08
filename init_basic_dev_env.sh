@@ -2,7 +2,7 @@
 
 # 初始化最基本的开发环境. 
 # 设置vim 和 tmux
-vim_template="https://gitee.com/yyancyer/nvim/raw/lua/vimrc.local"
+vim_template="https://gitee.com/yyancyer/nvim/raw/lua-lazy/vimrc.local"
 tmux_template="https://gitee.com/yyancyer/config/raw/master/tmux/tmux.template"
 vim_conf_path="$HOME/.vim"
 tmux_conf_path="$HOME/.tmux"
