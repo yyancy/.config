@@ -19,6 +19,7 @@ alias mv="mv -iv"
 alias rm="rm -vI"
 alias bc="bc -ql"
 alias mkd="mkdir -pv"
+alias ranger='joshuto'
 
 alias ping='ping -n'
 alias os="cat /etc/lsb-release"
