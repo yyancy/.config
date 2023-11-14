@@ -76,7 +76,19 @@ bind C-f command-prompt -p find-session 'switch-client -t %%'
 bind C-s set-window-option synchronize-panes
 
 # Active window title color
-setw -g window-status-current-style fg=black,bg=white
+# setw -g window-status-current-style fg=black,bg=white
+set -g status-bg colour234
+set -g status-fg colour137
+# set -g status-left ''
+set -g status-right '#[fg=colour233,bg=colour241,bold] %m-%d #[fg=colour233,bg=colour245,bold] %H:%M:%S '
+set -g status-right-length 50
+set -g status-left-length 20
+
+setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour50]#F '
+setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F '
+
+set-option -g history-limit 5000
+
 
 bind -T copy-mode    C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
 bind -T copy-mode-vi C-c send -X copy-pipe-and-cancel "xsel -i --clipboard"
