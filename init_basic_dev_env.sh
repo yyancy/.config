@@ -25,6 +25,9 @@ curl ${vim_template} -o "${vim_conf_path}/vimrc"
 git clone https://gitee.com/yyancyer/vim-tmux-navigator.git \
   ${vim_conf_path}/pack/plugins/start/vim-tmux-navigator
 
+git clone https://gitee.com/yyancyer/vim-highlightedyank \
+  ${vim_conf_path}/pack/plugins/start/vim-highlightedyank
+
 grep -q -i 'centos' /etc/os-release
 is_centos=$?
 
