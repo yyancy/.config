@@ -1,8 +1,8 @@
 # .config
 
+## install
 
-## install 
-``` bash
+```bash
 git init
 git remote add origin git@github.com:yyancy/.config.git
 git pull origin master
@@ -31,14 +31,17 @@ autoload -U compinit && compinit -u
 ```
 
 ## Initialize a new environment
-``` bash
+
+```bash
 curl -fsSL https://gitee.com/yyancyer/config/raw/master/init_basic_dev_env.sh -o init_basic.sh
 bash init_basic.sh
 ```
 
 ## install tmux and plugins
+
 As of tmux3.1, the configuration location of tmux is in `.config/tmux/tmux.conf`
 first, install tmux version above 3.1.
+
 ```bash
 wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
 tar xvf tmux-VERSION.tar.gz
@@ -46,13 +49,17 @@ tar xvf tmux-VERSION.tar.gz
 sudo make install
 
 ```
+
 ### install tpm
+
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
+
 later, using `C-a I` to install plugins
 
 ### Tmux tips
+
 ```bash
 # prefix l go to previous window
 # prefix ; go to previous pane
@@ -61,11 +68,30 @@ bind l last-window
 ```
 
 ## install homebrew
+
 ### install dependancies
+
 sudo apt-get install build-essential procps curl file git
+
 ### install script
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+### Git tips
+
+1. remove files from git but leave it in directory
+   git rm --cached FILENAME
+
+2. unstaged a staged changes (git add changes)
+   git reset HEAD FILENAME
+   git restore --staged FILENAME
+3. remove current changes
+   git restore FILENAME
+
+4. undo last commit
+   git reset --soft HEAD~1
+
 ## other programs
-* exa
-* duf
+
+- exa
+- duf
