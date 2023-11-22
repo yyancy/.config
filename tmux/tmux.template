@@ -14,7 +14,11 @@ set-option -sa terminal-overrides ',screen-256color:RGB'
 setw -g mode-keys vi
 set-option -g status-keys vi
 # Setting the prefix from C-b to C-a
-set -g prefix C-a
+# set -g prefix C-a
+set -g prefix `
+bind-key ` last-window
+bind-key e send-prefix
+
 
 set-option -g renumber-windows on
 
