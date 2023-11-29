@@ -17,6 +17,8 @@
 !keyd/
 !wezterm/
 !powershell/
+!lazygit/
+lazygit/state.yml
 
 
 
