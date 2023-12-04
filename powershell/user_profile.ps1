@@ -36,7 +36,7 @@ Set-Alias -Name l -Value ls
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
 
-
+Set-Alias -Name lg -Value lazygit
 Set-Alias -Name g -Value get-git
 Set-Alias -Name gst -Value get-gitstatus
 Set-Alias -Name gpp -Value get-gitpull

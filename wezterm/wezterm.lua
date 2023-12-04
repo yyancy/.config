@@ -11,6 +11,11 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- set PowerShell for windows
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }
+end
+
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
@@ -77,14 +82,20 @@ for i = 1, 8 do
 	-- CMD+ALT + number to activate that window
 	table.insert(config.keys, {
 		key = tostring(i),
-		mods = "LEADER",
+		mods = "CTRL|ALT",
 		action = act.ActivateTab(i - 1),
 	})
 end
 
-if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }
-end
+config.mouse_bindings = {
+	{
+		event = { Down = { streak = 1, button = "Right" } },
+		mods = "NONE",
+		action = wezterm.action_callback(function(window, pane)
+			window:perform_action(act({ PasteFrom = "Clipboard" }), pane)
+		end),
+	},
+}
 
 -- and finally, return the configuration to wezterm
 return config
