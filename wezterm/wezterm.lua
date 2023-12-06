@@ -11,10 +11,18 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+require("tabs").setup(config)
+require("links").setup(config)
+
 -- set PowerShell for windows
-if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }
+if wezterm.target_triple:find("windows") then
+	config.default_prog = { "pwsh" }
+	config.window_decorations = "RESIZE|TITLE"
 end
+
+-- config.underline_thickness = 3
+-- config.cursor_thickness = 4
+-- config.underline_position = -6
 
 -- This is where you actually apply your config choices
 
@@ -24,6 +32,8 @@ config.window_background_opacity = 0.8
 config.harfbuzz_features = { "liga=1" }
 config.font = wezterm.font({ family = "Fira Code", harfbuzz_features = { "calt=1", "clig=1", "liga=1" } })
 config.font_size = 14.0
+config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+config.scrollback_lines = 10000
 
 -- Show which key table is active in the status area
 wezterm.on("update-right-status", function(window, pane)
