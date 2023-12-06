@@ -42,6 +42,7 @@ alias mux='tmuxinator'
 
 has nvim && alias vim="nvim" vi="nvim" nv="nvim" vimdiff="nvim -d"
 has trash-put && alias trp="trash-put"
+has lazygit && alias lg='lazygit'
 
 # extension aliases
 alias -s txt=nvim
