@@ -29,3 +29,4 @@ lazygit/state.yml
 !.tasks.ini
 !zsh-config.zsh
 !stow-global-ignore
+!starship.toml

@@ -13,6 +13,7 @@ end
 
 require("tabs").setup(config)
 require("links").setup(config)
+require("keys").setup(config)
 
 -- set PowerShell for windows
 if wezterm.target_triple:find("windows") then
