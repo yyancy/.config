@@ -20,6 +20,9 @@
 !lazygit/
 lazygit/state.yml
 
+!atuin/
+!zsh/
+
 
 
 !profile.sh

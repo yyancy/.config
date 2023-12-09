@@ -66,12 +66,19 @@ function o() {
 
 function type() {
   CMD="$(command -v "$@")"
+  ORG_CMD=${CMD}
   echo "$CMD"
   while [[ -L "$CMD" ]]; do
     CMD="$(readlink "$CMD")"
     CMD="$(command -v "$CMD")"
     echo "$CMD"
   done
+
+  if [[ ! -L "$CMD" && "$CMD" != '/*' ]]; then
+    CMD="$(readlink -f "$ORG_CMD")"
+    echo "$CMD"
+
+  fi
   vv "$CMD"
 }
 

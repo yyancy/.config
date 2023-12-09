@@ -21,7 +21,7 @@ git
 # sudo
 systemadmin
 systemd
-tmux
+# tmux
 zsh-autosuggestions
 zsh-syntax-highlighting 
 per-directory-history
