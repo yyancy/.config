@@ -9,12 +9,12 @@ source "$SHELL_HOME/env.sh"
 # shellcheck source=/dev/null
 source "$SHELL_HOME/aliases.sh"
 
+source "$SHELL_HOME/clipboard.zsh"
 
 export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
 
 # define relevant variables
 export GIT_SSL_NO_VERIFY=1
-
 
 # execute some other extra work
 
@@ -27,12 +27,11 @@ export GIT_SSL_NO_VERIFY=1
 # command line history tool
 # HSTR configuration - add this to ~/.zshrc
 has hstrasdf && {
-  alias hh=hstr                    # hh to be alias for hstr
-  setopt histignorespace           # skip cmds w/ leading space from history
-  export HSTR_CONFIG=hicolor       # get more colors
-  bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+	alias hh=hstr                         # hh to be alias for hstr
+	setopt histignorespace                # skip cmds w/ leading space from history
+	export HSTR_CONFIG=hicolor            # get more colors
+	bindkey -s "\C-r" "\C-a hstr -- \C-j" # bind hstr to Ctrl-r (for Vi mode check doc)
 }
-
 
 # some program configurations
 #
@@ -40,15 +39,12 @@ has hstrasdf && {
 has zoxide && eval "$(zoxide init zsh)"
 has thefuck && eval "$(thefuck --alias)"
 
-
 # 21century learning usage
 go_libs="-lm"
 go_flags="-g -Wall -include allheads.h -O3"
 alias go_c="c99 -xc - $go_libs $go_flags"
 
-
 bindkey '^[' vi-cmd-mode
-
 
 # fzf
 # switch group using `,` and `.`
