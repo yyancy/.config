@@ -42,5 +42,22 @@ Set-Alias -Name gcc -Value get-gitcommit
 Set-Alias -Name gcam -Value get-gitcommitam
 Set-Alias -Name grs -Value get-gitrestore
 
+Set-PSReadLineKeyHandler -Key 'Ctrl+e' `
+        -BriefDescription "Go to EndOfLine or AcceptSuggestion" `
+        -LongDescription `
+            "If cursor is not at the end of line, then go to end of line, `
+            otherwise try to AcceptSuggestion" `
+        -ScriptBlock {
+    $line = $null
+    $cursor = $null
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+    if ($cursor -ne $line.Length) {
+        [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
+    } else {
+        [Microsoft.PowerShell.PSConsoleReadLine]::AcceptSuggestion()
+    }
+}
+
+
 # starship enable transient prompt
 Enable-TransientPrompt
