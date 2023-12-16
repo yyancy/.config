@@ -1,12 +1,8 @@
 # source aliases file
 SHELL_HOME="$HOME/.config/shell"
-# shellcheck source=/dev/null
 source "$SHELL_HOME/color.sh"
-# shellcheck source=/dev/null
 source "$SHELL_HOME/functions.sh"
-# shellcheck source=/dev/null
 source "$SHELL_HOME/env.sh"
-# shellcheck source=/dev/null
 source "$SHELL_HOME/aliases.sh"
 
 source "$SHELL_HOME/clipboard.zsh"
@@ -28,10 +24,11 @@ export GIT_SSL_NO_VERIFY=1
 # command line history tool
 # HSTR configuration - add this to ~/.zshrc
 has hstr && {
-	alias hh=hstr                         # hh to be alias for hstr
-	setopt histignorespace                # skip cmds w/ leading space from history
-	export HSTR_CONFIG=hicolor            # get more colors
+	alias hh=hstr          # hh to be alias for hstr
+	setopt histignorespace # skip cmds w/ leading space from history
+	export HSTR_CONFIG=hicolor,regexp-matching,raw-history-view
 	bindkey -s "\C-r" "\C-a hstr -- \C-j" # bind hstr to Ctrl-r (for Vi mode check doc)
+	export HSTR_TIOCSTI=y
 }
 
 # some program configurations

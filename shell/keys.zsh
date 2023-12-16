@@ -45,3 +45,6 @@ bindkey "^[^h" backward-kill-sub-word
 bindkey "^w" backward-kill-full-word
 bindkey "^[d" forward-kill-sub-word
 bindkey "^[^d" forward-kill-full-word
+
+bindkey -r "^[z"
+bindkey -r "^[x"

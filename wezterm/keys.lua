@@ -84,9 +84,9 @@ function M.setup(config)
 		},
 		-- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
 		{
-			key = "a",
-			mods = "LEADER|CTRL",
-			action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }),
+			key = "z",
+			mods = "LEADER|ALT",
+			action = wezterm.action.SendKey({ key = "z", mods = "ALT" }),
 		},
 		{ key = "LeftArrow", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },

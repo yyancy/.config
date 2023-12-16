@@ -22,6 +22,7 @@ has eza && {
 	alias lc='ll -schanged'   # Long format, newest status change (ctime) last
 }
 
+alias g='git'
 alias gst='git status'
 
 alias cp="cp -iv"

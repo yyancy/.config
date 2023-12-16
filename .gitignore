@@ -8,6 +8,7 @@
 !/tmux/
 /tmux/*
 !/tmux/tmux.conf
+!/tmux/fzf_panes.tmux
 
 !tmuxinator/
 !aria2/

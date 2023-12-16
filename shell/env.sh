@@ -2,6 +2,7 @@ export EDITOR="nvim"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPATH=:$MANPATH
+export HISTFILE
 
 # add go relevant configurations
 export GOPROXY=https://proxy.golang.com.cn,direct
