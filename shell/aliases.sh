@@ -13,7 +13,7 @@ alias .5='cd ../../../../../'
 has eza && {
 	alias ls='eza --group-directories-first'
 
-	alias ll='ls -l --git'    # Long format, git status
+	alias ll='ls -l'          # Long format, git status
 	alias l='ll -a'           # Long format, all files
 	alias lr='ll -T'          # Long format, recursive as a tree
 	alias lx='ll -sextension' # Long format, sort by extension

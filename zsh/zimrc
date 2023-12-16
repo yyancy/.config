@@ -26,5 +26,7 @@ zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
 zmodule romkatv/powerlevel10k --use degit
 zmodule hlissner/zsh-autopair
+# zmodule jeffreytse/zsh-vi-mode
+# zmodule marlonrichert/zsh-edit
 zmodule ohmyzsh/ohmyzsh --root plugins/copybuffer
 zmodule ohmyzsh/ohmyzsh --root plugins/copypath

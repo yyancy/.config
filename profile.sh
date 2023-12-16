@@ -10,6 +10,7 @@ source "$SHELL_HOME/env.sh"
 source "$SHELL_HOME/aliases.sh"
 
 source "$SHELL_HOME/clipboard.zsh"
+source "$SHELL_HOME/keys.zsh"
 
 export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
 
@@ -26,7 +27,7 @@ export GIT_SSL_NO_VERIFY=1
 
 # command line history tool
 # HSTR configuration - add this to ~/.zshrc
-has hstrasdf && {
+has hstr && {
 	alias hh=hstr                         # hh to be alias for hstr
 	setopt histignorespace                # skip cmds w/ leading space from history
 	export HSTR_CONFIG=hicolor            # get more colors
