@@ -1,8 +1,12 @@
 export EDITOR="nvim"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 export MANPATH=:$MANPATH
 export HISTFILE
+
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.cache/zim
 
 # add go relevant configurations
 export GOPROXY=https://proxy.golang.com.cn,direct
@@ -27,3 +31,8 @@ export PATH=$(echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", len
 
 export MANPAGER="less -FR --incsearch --ignore-case -j.3"
 export BAT_PAGER="less -FR --incsearch --ignore-case -j.3"
+
+# experiment settings
+# zsh-autosuggestions
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=1

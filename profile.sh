@@ -1,11 +1,12 @@
 # source aliases file
 SHELL_HOME="$HOME/.config/shell"
 source "$SHELL_HOME/color.sh"
-source "$SHELL_HOME/functions.sh"
+source "$SHELL_HOME/helper.sh"
 source "$SHELL_HOME/env.sh"
 source "$SHELL_HOME/aliases.sh"
-
+source "$SHELL_HOME/plugins.zsh"
 source "$SHELL_HOME/clipboard.zsh"
+source "$SHELL_HOME/fzf.zsh"
 source "$SHELL_HOME/keys.zsh"
 
 export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
@@ -47,8 +48,3 @@ bindkey '^[' vi-cmd-mode
 # fzf
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
-export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-d:down,ctrl-u:up'
-export FZF_DEFAULT_COMMAND='fd'
-export FZF_COMPLETION_TRIGGER='\'
-export FZF_TMUX=1
-export FZF_TMUX_HEIGHT='80%'

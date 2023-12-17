@@ -2,6 +2,7 @@
 /*/
 
 !shell/
+shell/fzf
 !alacritty/
 !cheatsheets/
 
