@@ -27,7 +27,7 @@ export GIT_SSL_NO_VERIFY=1
 has hstr && {
 	alias hh=hstr          # hh to be alias for hstr
 	setopt histignorespace # skip cmds w/ leading space from history
-	export HSTR_CONFIG=hicolor,regexp-matching,raw-history-view
+	export HSTR_CONFIG=hicolor,raw-history-view
 	bindkey -s "\C-r" "\C-a hstr -- \C-j" # bind hstr to Ctrl-r (for Vi mode check doc)
 	export HSTR_TIOCSTI=y
 }
