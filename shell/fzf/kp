@@ -1,0 +1,18 @@
+### PROCESS
+# mnemonic: [K]ill [P]rocess
+# show output of "ps -ef", use [tab] to select one or multiple entries
+# press [enter] to kill selected processes and go back to the process list.
+# or press [escape] to go back to the process list. Press [escape] twice to exit completely.
+
+local fzf_opts="-m \
+--height=50% \
+--min-height=15 --tac --reverse \
+--preview-window=down:2"
+
+local pid=$(ps -ef | sed 1d | eval "fzf ${fzf_opts} -m --header='[kill:process]'" | awk '{print $2}')
+
+if [ "x$pid" != "x" ]
+then
+  echo $pid | xargs kill -${1:-9}
+  kp
+fi

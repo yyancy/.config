@@ -45,6 +45,6 @@ alias go_c="c99 -xc - $go_libs $go_flags"
 
 bindkey '^[' vi-cmd-mode
 
-# fzf
+# fzf-tab
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
