@@ -16,8 +16,8 @@ export GOPATH="$HOME/.cache/go"
 # check whether set up a proxy
 ss -tnl | grep 7890 &>/dev/null
 [ $? -eq 0 ] && {
-	export https_proxy=http://127.0.0.1:7890
-	export http_proxy=https://127.0.0.1:7890
+	export http_proxy=http://127.0.0.1:7890
+	export https_proxy=https://127.0.0.1:7890
 }
 
 # add path
