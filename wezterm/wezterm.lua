@@ -31,8 +31,14 @@ end
 -- For example, changing the color scheme:
 -- config.color_scheme = "AdventureTime"
 config.window_background_opacity = 0.8
-config.harfbuzz_features = { "liga=1" }
-config.font = wezterm.font({ family = "Fira Code", harfbuzz_features = { "calt=1", "clig=1", "liga=1" } })
+-- config.harfbuzz_features = { "liga=1" }
+-- Source Han Sans CN
+-- config.font = wezterm.font({ family = "Fira Code", harfbuzz_features = { "calt=1", "clig=1", "liga=1" } })
+config.font = wezterm.font_with_fallback({
+	{ family = "Fira Code", harfbuzz_features = { "calt=1", "clig=1", "liga=1" } },
+	-- 我的天空
+	{ family = "Source Han Sans CN", scale = 1.1 },
+})
 config.font_size = 14.0
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.scrollback_lines = 10000
@@ -46,7 +52,6 @@ wezterm.on("update-right-status", function(window, pane)
 	window:set_right_status(name or "")
 end)
 
-
 config.mouse_bindings = {
 	{
 		event = { Down = { streak = 1, button = "Right" } },
@@ -55,6 +60,10 @@ config.mouse_bindings = {
 			window:perform_action(act({ PasteFrom = "Clipboard" }), pane)
 		end),
 	},
+}
+
+config.quick_select_patterns = {
+	-- "^.*?$",
 }
 
 -- and finally, return the configuration to wezterm

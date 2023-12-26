@@ -6,8 +6,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export MANPATH=:$MANPATH
 export HISTFILE
 
-export ZIM_HOME=${ZDOTDIR:-${HOME}}/.cache/zim
-
 # add go relevant configurations
 export GOPROXY=https://proxy.golang.com.cn,direct
 export GO111MODULE="on"
@@ -17,7 +15,7 @@ export GOPATH="$HOME/.cache/go"
 ss -tnl | grep 7890 &>/dev/null
 [ $? -eq 0 ] && {
 	export http_proxy=http://127.0.0.1:7890
-	export https_proxy=https://127.0.0.1:7890
+	export https_proxy=http://127.0.0.1:7890
 }
 
 # add path

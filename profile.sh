@@ -9,7 +9,15 @@ source "$SHELL_HOME/clipboard.zsh"
 source "$SHELL_HOME/fzf.zsh"
 source "$SHELL_HOME/keys.zsh"
 
-export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
+# Set PATH, MANPATH, etc., for Homebrew.
+test -d /home/linuxbrew/.linuxbrew && {
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
+}
+
+test -d $HOME/.cargo && {
+	. "$HOME/.cargo/env"
+}
 
 # define relevant variables
 export GIT_SSL_NO_VERIFY=1

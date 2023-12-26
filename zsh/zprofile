@@ -1,0 +1,18 @@
+skip_global_compinit=1
+
+
+# export LANG=en_US.UTF-8
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+export EDITOR="nvim"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_DATA_HOME/history"
+
+
+# do not update all package automatically
+export HOMEBREW_NO_AUTO_UPDATE=1

@@ -46,7 +46,7 @@ alias modx='chmod +x '
 alias ssudo='sudo -E env "PATH=$PATH"'
 
 alias g28='iconv -f gbk -t utf-8'
-alias fd='fdfind'
+# alias fd='fdfind'
 alias less='less --incsearch --ignore-case -j.3'
 # alias man='man -P "less --incsearch --ignore-case"'
 alias mux='tmuxinator'

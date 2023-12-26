@@ -23,6 +23,7 @@ lazygit/state.yml
 
 !atuin/
 !zsh/
+zsh/.zcompdump*
 
 
 
