@@ -26,6 +26,7 @@ lazygit/state.yml
 zsh/.zcompdump*
 zsh/.zcompcache
 
+!git/
 
 
 !profile.sh

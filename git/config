@@ -1,0 +1,48 @@
+[user]
+	email = yyancy517@gmail.com
+	name = yancy
+[core]
+	autocrlf = input
+	editor = nvim
+	pager = delta
+	quotepath = false
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+  syntax-theme = ansi
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  side-by-side = false
+  line-numbers = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+[http]
+	sslverify = false
+[include]
+	path = ~/.config/delta-themes.gitconfig
+
+[pull]
+  rebase = true
+[rebase]
+  autoStash = true
+
+[alias]
+st = status -sb
+co = checkout
+c = commit --short
+ci = commit --short
+p = push
+l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=short
+
+  d = diff
+  dc = diff --cached
+  rs=reset
+  rsh=reset --hard
+  rso=reset --soft
+  rv=revert
+[http "https://github.com"]
+	proxy = http://127.0.0.1:7890
+	sslVerify = false

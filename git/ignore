@@ -1,0 +1,3 @@
+# ignore common untracked files
+/.idea
+*.pyc
