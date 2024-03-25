@@ -18,6 +18,12 @@ ss -tnl | grep 7890 &>/dev/null
 	export https_proxy=http://127.0.0.1:7890
 }
 
+# Set PATH, MANPATH, etc., for Homebrew.
+test -d /home/linuxbrew/.linuxbrew && {
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
+}
+
 # add path
 pathprepend "$HOME/.cache/go/bin"
 pathprepend "$HOME/.yarn/bin"

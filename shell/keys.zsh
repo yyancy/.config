@@ -37,14 +37,15 @@ zle -N forward-kill-sub-word
 # because that simulates bash behavior.
 zle -A emacs-forward-word forward-sub-word
 
-bindkey "^[b" backward-sub-word
-bindkey "^[^b" backward-full-word
-bindkey "^[f" forward-sub-word
-bindkey "^[^f" forward-full-word
-bindkey "^[^h" backward-kill-sub-word
-bindkey "^w" backward-kill-full-word
-bindkey "^[d" forward-kill-sub-word
-bindkey "^[^d" forward-kill-full-word
+# bindkey "^[b" backward-sub-word
+# bindkey "^[^b" backward-full-word
+# bindkey "^[f" forward-sub-word
+# bindkey "^[^f" forward-full-word
+# bindkey "^[^h" backward-kill-sub-word
+# bindkey "^w" backward-kill-full-word
+# bindkey "^[d" forward-kill-sub-word
+# bindkey "^[^d" forward-kill-full-word
+bindkey "^[q" run-help
 
 # bindkey -r "^[z"
 # bindkey -r "^[x"
