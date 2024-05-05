@@ -50,3 +50,4 @@ bindkey '^[' vi-cmd-mode
 # fzf-tab
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ':fzf-tab:*' fzf-flags --height=30%
