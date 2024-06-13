@@ -20,6 +20,7 @@
 !powershell/
 !lazygit/
 lazygit/state.yml
+!yazi/
 
 !atuin/
 !zsh/
