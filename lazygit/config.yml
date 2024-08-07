@@ -5,5 +5,11 @@ git:
 
 
 gui:
-  scrollHeight: 4
+  scrollHeight: 12
   scrollOffMargin: 4
+
+# Keybindings
+# keybinding:
+#   universal:
+#     scrollUpMain-alt1: <
+    # scrollDownMain-alt1: <c-a-j>
