@@ -12,7 +12,8 @@ prepend_keymap = [
     shell 'echo "$@" | xclip -i -selection clipboard -t text/uri-list' --confirm
     ''', "yank"]},
 { on   = "<Enter>", run  = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
-{ on   = "p", run  = "plugin --sync smart-paste", desc = "Paste into the hovered directory or CWD" }
+{ on   = "p", run  = "plugin --sync smart-paste", desc = "Paste into the hovered directory or CWD" },
+{ on  = [ "T" ], run  = "shell 'tmux new-window' --interactive", desc  = "Open tmux from current directory" }
 ]
 
 keymap = [
