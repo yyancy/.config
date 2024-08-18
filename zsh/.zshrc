@@ -126,6 +126,6 @@ fi
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 # export MCFLY_RESULTS_SORT=LAST_RUN
 # eval "$(mcfly init zsh)"
-return
 # start below code very slow terminal
 eval "$(atuin init zsh --disable-up-arrow)"
+eval "$(mise activate zsh)"

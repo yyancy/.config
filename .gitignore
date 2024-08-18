@@ -21,14 +21,17 @@
 !lazygit/
 lazygit/state.yml
 !yazi/
-
+!fcitx/config
 !atuin/
 !zsh/
 zsh/.zcompdump*
 zsh/.zcompcache
 
+!ulauncher
+ulauncher/ext_preferences
 !git/
 
+!zellij
 
 !profile.sh
 !.gitignore
