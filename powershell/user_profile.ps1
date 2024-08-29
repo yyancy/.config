@@ -10,7 +10,7 @@ function Invoke-Starship-TransientFunction {
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
-fnm env --use-on-cd | Out-String | Invoke-Expression
+# fnm env --use-on-cd | Out-String | Invoke-Expression
 
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource History
