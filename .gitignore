@@ -22,10 +22,18 @@
 lazygit/state.yml
 !yazi/
 !fcitx/config
+!fcitx/conf/fcitx-keyboard.config
 !atuin/
 !zsh/
 zsh/.zcompdump*
 zsh/.zcompcache
+
+!sogoupinyin/
+sogoupinyin/*
+!sogoupinyin/conf/
+sogoupinyin/conf/*
+!sogoupinyin/conf/env.ini
+
 
 !ulauncher
 ulauncher/ext_preferences
