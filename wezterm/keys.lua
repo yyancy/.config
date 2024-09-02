@@ -38,7 +38,7 @@ function M.setup(config)
 		{ mods = M.mod, key = "h", action = act({ ActivateTabRelative = -1 }) },
 		{ mods = M.mod, key = "R", action = wezterm.action.RotatePanes("Clockwise") },
 		-- show the pane selection mode, but have it swap the active and selected panes
-		{ mods = M.mod, key = "S", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
+		-- { mods = M.mod, key = "S", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
 		-- Clipboard
 		{ mods = M.mod, key = "C", action = act.CopyTo("Clipboard") },
 		{ mods = "CTRL|SHIFT", key = "C", action = act.CopyTo("Clipboard") },
@@ -88,16 +88,16 @@ function M.setup(config)
 			mods = "LEADER|ALT",
 			action = wezterm.action.SendKey({ key = "z", mods = "ALT" }),
 		},
-		{ key = "LeftArrow", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+		{ key = "LeftArrow", mods = M.mod, action = act.ActivatePaneDirection("Left") },
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 
-		{ key = "RightArrow", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+		{ key = "RightArrow", mods = M.mod, action = act.ActivatePaneDirection("Right") },
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 
-		{ key = "UpArrow", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+		{ key = "UpArrow", mods = M.mod, action = act.ActivatePaneDirection("Up") },
 		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
 
-		{ key = "DownArrow", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+		{ key = "DownArrow", mods = M.mod, action = act.ActivatePaneDirection("Down") },
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 	}
 	for i = 1, 8 do
@@ -108,6 +108,17 @@ function M.setup(config)
 			action = act.ActivateTab(i - 1),
 		})
 	end
+
+	table.insert(config.keys, {
+
+		mods = M.mod,
+		key = "s",
+		action = wezterm.action.QuickSelectArgs({
+			patterns = {
+				".{6,100}",
+			},
+		}),
+	})
 end
 
 ---@param resize_or_move "resize" | "move"
@@ -133,8 +144,8 @@ function M.split_nav(resize_or_move, mods, key, dir)
 				end
 				wezterm.log_info("is_zoomed: " .. tostring(is_zoomed))
 				if is_zoomed then
-					dir = dir == "Up" or dir == "Right" and "Next" or "Prev"
-					wezterm.log_info("dir: " .. dir)
+					local dir_val = dir == "Up" or dir == "Right" and "Next" or "Prev"
+					wezterm.log_info("dir: " .. dir_val)
 				end
 				win:perform_action({ ActivatePaneDirection = dir }, pane)
 				win:perform_action({ SetPaneZoomState = is_zoomed }, pane)
