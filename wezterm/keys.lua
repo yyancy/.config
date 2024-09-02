@@ -25,7 +25,7 @@ function M.setup(config)
 		{ mods = M.mod, key = "k", action = act.ScrollByPage(-0.5) },
 		{ mods = M.mod, key = "j", action = act.ScrollByPage(0.5) },
 		-- New Tab
-		{ mods = M.mod, key = "t", action = act.SpawnTab("CurrentPaneDomain") },
+		{ mods = "LEADER", key = "T", action = act.SpawnTab("CurrentPaneDomain") },
 		-- Splits
 		{ mods = M.mod, key = "Enter", action = M.smart_split },
 		{ mods = M.mod, key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
@@ -50,10 +50,16 @@ function M.setup(config)
 		{ mods = M.mod, key = "M", action = act.TogglePaneZoomState },
 		{ mods = M.mod, key = "p", action = act.ActivateCommandPalette },
 		{ mods = M.mod, key = "d", action = act.ShowDebugOverlay },
+		{
+			mods = M.mod,
+			key = "u",
+			action = act.CharSelect({ copy_on_select = true, copy_to = "ClipboardAndPrimarySelection" }),
+		},
 		M.split_nav("resize", "CTRL", "LeftArrow", "Right"),
 		M.split_nav("resize", "CTRL", "RightArrow", "Left"),
 		M.split_nav("resize", "CTRL", "UpArrow", "Up"),
 		M.split_nav("resize", "CTRL", "DownArrow", "Down"),
+		-- doesn't work on tmux with nvim :(
 		-- M.split_nav("move", "CTRL", "h", "Left"),
 		-- M.split_nav("move", "CTRL", "j", "Down"),
 		-- M.split_nav("move", "CTRL", "k", "Up"),

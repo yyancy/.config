@@ -123,3 +123,6 @@ sudo apt-get install build-essential procps curl file git
 
 ## Fcitx configuration references
 - https://github.com/xieyuheng/conf/blob/master/fcitx.org 
+
+## fix keybinding issues 
+- https://askubuntu.com/questions/68463/how-to-disable-global-super-p-shortcut
