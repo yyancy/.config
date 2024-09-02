@@ -119,3 +119,7 @@ sudo apt-get install build-essential procps curl file git
 
 - exa
 - duf
+
+
+## Fcitx configuration references
+- https://github.com/xieyuheng/conf/blob/master/fcitx.org 
