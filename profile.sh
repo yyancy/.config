@@ -1,44 +1,32 @@
 # source aliases file
 SHELL_HOME="$HOME/.config/shell"
+source "$SHELL_HOME/plugins.zsh"
 source "$SHELL_HOME/color.sh"
-source "$SHELL_HOME/helper.sh"
+source "$SHELL_HOME/helper.zsh"
 source "$SHELL_HOME/env.sh"
 source "$SHELL_HOME/aliases.sh"
-source "$SHELL_HOME/plugins.zsh"
 source "$SHELL_HOME/clipboard.zsh"
 source "$SHELL_HOME/fzf.zsh"
 source "$SHELL_HOME/keys.zsh"
 
 test -d $HOME/.cargo && {
-	. "$HOME/.cargo/env"
+  . "$HOME/.cargo/env"
 }
 
 # define relevant variables
 export GIT_SSL_NO_VERIFY=1
-
-# execute some other extra work
-
-# switch Esc key and Caps key
-# [ -x "$(command -v xmodmap)" ] && xmodmap ~/.Xmodmap
-# [ -x "$(command -v setxkbmap)" ] && setxkbmap -option caps:swapescape
 
 # some stuffs
 
 # command line history tool
 # HSTR configuration - add this to ~/.zshrc
 has hstr && {
-	alias hh=hstr          # hh to be alias for hstr
-	setopt histignorespace # skip cmds w/ leading space from history
-	export HSTR_CONFIG=hicolor,raw-history-view
-	bindkey -s "\C-r" "\C-a hstr -- \C-j" # bind hstr to Ctrl-r (for Vi mode check doc)
-	export HSTR_TIOCSTI=y
+  alias hh=hstr          # hh to be alias for hstr
+  setopt histignorespace # skip cmds w/ leading space from history
+  export HSTR_CONFIG=hicolor,raw-history-view
+  bindkey -s "\C-r" "\C-a hstr -- \C-j" # bind hstr to Ctrl-r (for Vi mode check doc)
+  export HSTR_TIOCSTI=y
 }
-
-# some program configurations
-#
-# zoxide
-has zoxide && eval "$(zoxide init zsh)"
-has thefuck && eval "$(thefuck --alias)"
 
 # 21century learning usage
 go_libs="-lm"
@@ -51,3 +39,11 @@ bindkey '^[' vi-cmd-mode
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' fzf-flags --height=30%
+
+# some program configurations
+#
+# zoxide
+has zoxide && eval "$(zoxide init zsh)"
+has thefuck && eval "$(thefuck --alias)"
+has atuin && eval "$(atuin init zsh --disable-up-arrow)"
+has mise && eval "$(mise activate zsh)"

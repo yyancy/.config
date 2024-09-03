@@ -122,10 +122,6 @@ yy() {
   rm -f -- "$tmp"
 }
 
-function af() {
-  alias-finder -l "$@"
-}
-
 function cpr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
 }

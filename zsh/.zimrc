@@ -30,3 +30,4 @@ zmodule hlissner/zsh-autopair
 # zmodule marlonrichert/zsh-edit
 zmodule ohmyzsh/ohmyzsh --root plugins/copybuffer
 zmodule ohmyzsh/ohmyzsh --root plugins/copypath
+zmodule ohmyzsh/ohmyzsh --root plugins/copyfile

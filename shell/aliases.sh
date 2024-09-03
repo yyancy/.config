@@ -11,19 +11,20 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
 has eza && {
-	alias ls='eza --group-directories-first'
+  alias ls='eza --group-directories-first'
 
-	alias ll='ls -l'          # Long format, git status
-	alias l='ll -a'           # Long format, all files
-	alias lr='ll -T'          # Long format, recursive as a tree
-	alias lx='ll -sextension' # Long format, sort by extension
-	alias lk='ll -ssize'      # Long format, largest file size last
-	alias lt='ll -smodified'  # Long format, newest modification time last
-	alias lc='ll -schanged'   # Long format, newest status change (ctime) last
+  alias ll='ls -l'          # Long format, git status
+  alias l='ll -a'           # Long format, all files
+  alias lr='ll -T'          # Long format, recursive as a tree
+  alias lx='ll -sextension' # Long format, sort by extension
+  alias lk='ll -ssize'      # Long format, largest file size last
+  alias lt='ll -smodified'  # Long format, newest modification time last
+  alias lc='ll -schanged'   # Long format, newest status change (ctime) last
 }
 
 alias g='git'
 alias gst='git status'
+alias gl='git pull'
 
 alias cp="cp -iv"
 alias mv="mv -iv"

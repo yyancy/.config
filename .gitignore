@@ -27,6 +27,7 @@ lazygit/state.yml
 !zsh/
 zsh/.zcompdump*
 zsh/.zcompcache
+zsh/.zhistory
 
 !sogoupinyin/
 sogoupinyin/*
