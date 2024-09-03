@@ -49,3 +49,4 @@ ulauncher/ext_preferences
 !zsh-config.zsh
 !stow-global-ignore
 !starship.toml
+!README.md

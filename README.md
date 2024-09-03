@@ -1,33 +1,12 @@
 # .config
 
 ## install
-
 ```bash
 git init
 git remote add origin git@github.com:yyancy/.config.git
 git pull origin master
 
-# installing zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
-# installing zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# installing zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# editing zshrc file
-source ~/.config/zsh-config.zsh
-
-source $ZSH/oh-my-zsh.sh
-
-source ~/.config/profile.sh
-
-# at the end of zshrc file
-## autujump setup configuration
-[[ -s /home/yancy/.autojump/etc/profile.d/autojump.sh ]] && source /home/yancy/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
-
+ln -sv ~/.config/zsh/zprofile ~/.zprofile
 ```
 
 ## Initialize a new environment
@@ -126,3 +105,7 @@ sudo apt-get install build-essential procps curl file git
 
 ## fix keybinding issues 
 - https://askubuntu.com/questions/68463/how-to-disable-global-super-p-shortcut
+
+
+## TODOs
+- try fzf jump feature: https://github.com/junegunn/fzf/issues/3637

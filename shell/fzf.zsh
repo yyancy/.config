@@ -1,4 +1,4 @@
-export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-d:down,ctrl-u:up'
+export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-d:down,ctrl-u:up --jump-labels '123456789' --bind "::jump" --bind ";:jump-accept"'
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_TMUX=1
@@ -21,11 +21,3 @@ fif() {
   rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
 }
 
-yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
