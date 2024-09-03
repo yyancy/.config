@@ -55,10 +55,11 @@ function M.setup(config)
 			key = "u",
 			action = act.CharSelect({ copy_on_select = true, copy_to = "ClipboardAndPrimarySelection" }),
 		},
-		M.split_nav("resize", "CTRL", "LeftArrow", "Right"),
-		M.split_nav("resize", "CTRL", "RightArrow", "Left"),
-		M.split_nav("resize", "CTRL", "UpArrow", "Up"),
-		M.split_nav("resize", "CTRL", "DownArrow", "Down"),
+		-- add leader fix vim-muliple-visual Ctrl-down keybinding.
+		M.split_nav("resize", "LEADER|CTRL", "LeftArrow", "Right"),
+		M.split_nav("resize", "LEADER|CTRL", "RightArrow", "Left"),
+		M.split_nav("resize", "LEADER|CTRL", "UpArrow", "Up"),
+		M.split_nav("resize", "LEADER|CTRL", "DownArrow", "Down"),
 		-- doesn't work on tmux with nvim :(
 		-- M.split_nav("move", "CTRL", "h", "Left"),
 		-- M.split_nav("move", "CTRL", "j", "Down"),
