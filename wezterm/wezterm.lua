@@ -25,6 +25,9 @@ if wezterm.target_triple:find("windows") then
 end
 
 -- This is where you actually apply your config choices
+-- Colorscheme
+config.color_scheme_dirs = { wezterm.home_dir .. "/.config/tokyonight.nvim/extras/wezterm" }
+config.color_scheme = "tokyonight_night"
 
 config.window_background_opacity = 0.8
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
@@ -88,6 +91,6 @@ config.quick_select_patterns = {
 
 -- Cursor
 config.default_cursor_style = "BlinkingBar"
-config.force_reverse_video_cursor = true
+-- config.force_reverse_video_cursor = true
 -- and finally, return the configuration to wezterm
 return config
