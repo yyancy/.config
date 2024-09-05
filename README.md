@@ -46,6 +46,13 @@ later, using `C-a I` to install plugins
 bind l last-window
 ```
 
+### Mint disable Alt-` keybinding
+gsettings list-recursively | grep Above_Tab
+
+dconf-editor
+https://superuser.com/questions/1338522/disable-alt-keyboard-shortcut-in-linux
+
+
 ### zsh change cursor shape
 
 add the following code to the start of .zshrc file.
