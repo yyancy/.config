@@ -4,6 +4,7 @@ local act = wezterm.action
 local M = {}
 
 M.mod = wezterm.target_triple:find("windows") and "SHIFT|CTRL" or "SHIFT|SUPER"
+M.switch_mod = wezterm.target_triple:find("windows") and "ALT" or "CTRL|ALT"
 
 M.smart_split = wezterm.action_callback(function(window, pane)
 	local dim = pane:get_dimensions()
@@ -111,13 +112,19 @@ function M.setup(config)
 		-- CMD+ALT + number to activate that window
 		table.insert(config.keys, {
 			key = tostring(i),
-			mods = "CTRL|ALT",
+			mods = M.switch_mod,
 			action = act.ActivateTab(i - 1),
 		})
 	end
 
+	if wezterm.target_triple:find("windows") then
+		table.insert(config.keys, {
+			key = "`",
+			mods = "ALT",
+			action = wezterm.action.ActivateLastTab,
+		})
+	end
 	table.insert(config.keys, {
-
 		mods = M.mod,
 		key = "s",
 		action = wezterm.action.QuickSelectArgs({
