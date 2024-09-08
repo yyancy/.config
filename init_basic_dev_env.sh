@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# 使用Gitee来加速下载
+#
+# curl -fsSL https://gitee.com/yyancyer/config/raw/master/init_basic_dev_env.sh -o init_basic.sh
+# bash init_basic.sh
+
 # 初始化最基本的开发环境.
 # 设置vim 和 tmux
 vim_template="https://gitee.com/yyancyer/nvim/raw/lua-lazy/vimrc.local"
