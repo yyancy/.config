@@ -43,7 +43,13 @@ later, using `C-a I` to install plugins
 # prefix l go to previous window
 # prefix ; go to previous pane
 # A-S-c reload config
-bind l last-window
+#2 prefix !  create a new window from a pane
+# prefix z  maximux the pane
+# prefix s show all sessions
+# prefix ( previous session
+# prefix ) next session
+# prefix . move window from one session to another
+# prefix + [ enter vi mode
 ```
 
 ### Mint disable Alt-` keybinding
