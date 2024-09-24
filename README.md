@@ -65,6 +65,10 @@ sudo apt-get install build-essential procps curl file git
 ### Mint disable Alt-` keybinding
 gsettings list-recursively | grep Above_Tab
 
+### Mint disable Alt-click move windows
+update System settings - Windows - Click actions -> Window Action key
+https://www.reddit.com/r/linuxmint/comments/18wlx8i/disabling_alt_click_hotkey/
+
 dconf-editor
 https://superuser.com/questions/1338522/disable-alt-keyboard-shortcut-in-linux
 

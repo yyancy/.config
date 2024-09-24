@@ -28,6 +28,7 @@ lazygit/state.yml
 zsh/.zcompdump*
 zsh/.zcompcache
 zsh/.zhistory
+zsh/.zsh_history
 
 !sogoupinyin/
 sogoupinyin/*
@@ -51,3 +52,4 @@ ulauncher/ext_preferences
 !stow-global-ignore
 !starship.toml
 !README.md
+!initiaize-personal-development-environment.md
