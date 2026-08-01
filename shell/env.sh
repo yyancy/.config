@@ -1,5 +1,5 @@
 export EDITOR="nvim"
-export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/bin"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"

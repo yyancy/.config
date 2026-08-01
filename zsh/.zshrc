@@ -15,8 +15,8 @@ zle-line-init() {
 }
 zle -N zle-line-init
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-# Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -e
+# vi keymap
+bindkey -v
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -37,9 +37,5 @@ WORDCHARS=${WORDCHARS//[\/]}
 if [ -f "$HOME/.config/shell/profile.zsh" ]; then
   . "$HOME/.config/shell/profile.zsh"
 fi
-
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
-# export MCFLY_RESULTS_SORT=LAST_RUN
-# eval "$(mcfly init zsh)"
 
 [[ -f "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local" ]] && source "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local"

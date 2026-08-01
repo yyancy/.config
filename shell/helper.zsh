@@ -64,7 +64,9 @@ function o() {
   xdg-open "$@" &> /dev/null
 }
 
-function type() {
+# Resolve a command to its real path and print its version.
+# Named `typeof` to avoid shadowing the zsh builtin `type`.
+function typeof() {
   CMD="$(command -v "$@")"
   ORG_CMD=${CMD}
   echo "$CMD"

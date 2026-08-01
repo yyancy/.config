@@ -1,9 +1,9 @@
-export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-d:down,ctrl-u:up --jump-labels '123456789' --bind "::jump" --bind ";:jump-accept"'
+export fzf_preview_cmd='bat --color=always --style=numbers {} 2>/dev/null || cat {}'
+export FZF_DEFAULT_OPTS="--bind=ctrl-t:top,change:top --bind ctrl-d:down,ctrl-u:up --jump-labels '123456789' --bind '::jump' --bind ';:jump-accept' --preview '$fzf_preview_cmd' --preview-window=right:50%:hidden --bind '?:toggle-preview'"
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_TMUX=1
 export FZF_TMUX_HEIGHT='80%'
-export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
 
 
 
