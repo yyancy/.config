@@ -3,6 +3,15 @@
 
 !shell/
 !alacritty/
+!fish/config.fish
+# fish/conf.d/secrets.fish
+!/fish/
+/fish/*
+!fish/config.fish
+!fish/conf.d/
+fish/conf.d/99-local.fish
+!fish/functions/yy.fish
+# fish/completions/
 !cheatsheets/
 
 !/tmux/
@@ -27,6 +36,8 @@ yazi/plugins
 !atuin/
 !zsh/
 zsh/.zcompdump*
+zsh/zshrc.local
+shell/env.local.sh
 zsh/.zcompcache
 zsh/.zhistory
 zsh/.zsh_history

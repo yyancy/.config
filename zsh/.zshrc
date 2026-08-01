@@ -41,3 +41,5 @@ fi
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 # export MCFLY_RESULTS_SORT=LAST_RUN
 # eval "$(mcfly init zsh)"
+
+[[ -f "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local" ]] && source "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local"

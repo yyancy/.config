@@ -13,7 +13,7 @@ test -d $HOME/.cargo && {
   . "$HOME/.cargo/env"
 }
 
-# define relevant variables
+# Disable SSL cert verification — needed for corporate/internal git servers with self-signed certs.
 export GIT_SSL_NO_VERIFY=1
 
 # some stuffs
@@ -47,3 +47,8 @@ has zoxide && eval "$(zoxide init zsh)"
 has thefuck && eval "$(thefuck --alias)"
 has atuin && eval "$(atuin init zsh --disable-up-arrow)"
 has mise && eval "$(mise activate zsh)"
+
+[ -f "$SHELL_HOME/env.local.sh" ] && source "$SHELL_HOME/env.local.sh"
+[ -f "$HOME/.secrets/env.sh" ] && source "$HOME/.secrets/env.sh"
+
+[ -f "$ZDOTDIR/zshrc.local" ] && source "$ZDOTDIR/zshrc.local"
