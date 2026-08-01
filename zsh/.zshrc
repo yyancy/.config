@@ -34,8 +34,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 [[ ! -f ${ZDOTDIR:-$HOME/.config/zsh}/.p10k.zsh ]] || source ${ZDOTDIR:-$HOME/.config/zsh}/.p10k.zsh
 
 # User configuration
-if [ -f "$HOME/.config/profile.sh" ]; then
-  . $HOME/.config/profile.sh
+if [ -f "$HOME/.config/shell/profile.zsh" ]; then
+  . "$HOME/.config/shell/profile.zsh"
 fi
 
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi

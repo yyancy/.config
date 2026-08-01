@@ -55,7 +55,6 @@ ulauncher/ext_preferences
 
 !zellij
 
-!profile.sh
 !.gitignore
 !xprofile
 !.Xmodmap
