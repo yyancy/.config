@@ -63,4 +63,4 @@ ulauncher/ext_preferences
 !stow-global-ignore
 !starship.toml
 !README.md
-!initiaize-personal-development-environment.md
+!docs/
