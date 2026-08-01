@@ -21,6 +21,7 @@
 !lazygit/
 lazygit/state.yml
 !yazi/
+yazi/plugins
 !fcitx/config
 !fcitx/conf/fcitx-keyboard.config
 !atuin/
