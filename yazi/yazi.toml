@@ -1,6 +1,6 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
 ratio          = [ 1, 4, 3 ]
@@ -54,8 +54,8 @@ pdf = [
 ]
 
 [open]
-rules = [
-	{ name = "*/", use = [ "edit", "open", "reveal" ] },
+append_rules = [
+	{ mime = "inode/directory", use = [ "edit", "open", "reveal" ] },
 
 	{ mime = "text/*",  use = [ "edit", "reveal" ] },
 	{ mime = "image/*", use = [ "open", "reveal" ] },
@@ -74,9 +74,8 @@ rules = [
 	{ mime = "application/x-7z-compressed", use = [ "extract", "reveal" ] },
 	{ mime = "application/x-rar",           use = [ "extract", "reveal" ] },
 	{ mime = "application/xz",              use = [ "extract", "reveal" ] },
-
-	{ name = "*.pdf", use = [ "pdf" ] },
-	{ mime = "*", use = [ "open", "reveal" ] },
+	{ mime = "application/pdf",             use = [ "pdf" ] },
+	# { mime = "*", use = [ "open", "reveal" ] },
 ]
 
 [tasks]
@@ -89,7 +88,7 @@ suppress_preload = false
 
 [plugin]
 
-preloaders = [
+append_preloaders = [
 	# Image
 	{ mime = "image/vnd.djvu", run = "noop" },
 	{ mime = "image/*",        run = "image" },
@@ -98,8 +97,8 @@ preloaders = [
 	# PDF
 	{ mime = "application/pdf", run = "pdf" },
 ]
-previewers = [
-	{ name = "*/", run = "folder", sync = true },
+append_previewers = [
+	# { mime = "inode/directory", run = "folder", sync = true },
 	# Code
 	{ mime = "text/*",                 run = "code" },
 	{ mime = "*/xml",                  run = "code" },
@@ -124,7 +123,7 @@ previewers = [
 	{ mime = "application/x-rar",           run = "archive" },
 	{ mime = "application/xz",              run = "archive" },
 	# Fallback
-	{ name = "*", run = "file" },
+	# { mime = "*", run = "file" },
 ]
 
 [input]
