@@ -1,9 +1,7 @@
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
-
-
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
 gui:
   scrollHeight: 12
   scrollOffMargin: 4
@@ -12,4 +10,4 @@ gui:
 # keybinding:
 #   universal:
 #     scrollUpMain-alt1: <
-    # scrollDownMain-alt1: <c-a-j>
+# scrollDownMain-alt1: <c-a-j>
