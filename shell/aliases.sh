@@ -13,8 +13,10 @@ alias .5='cd ../../../../../'
 has eza && {
   alias ls='eza --group-directories-first'
 
-  alias ll='ls -l'          # Long format, git status
-  alias l='ll -a'           # Long format, all files
+  alias l='ls'              # basic list
+  alias ll='ls -l'          # long, no hidden
+  alias la='ls -a'          # all, short
+  alias lla='ls -l -a'      # long, all
   alias lr='ll -T'          # Long format, recursive as a tree
   alias lx='ll -sextension' # Long format, sort by extension
   alias lk='ll -ssize'      # Long format, largest file size last
@@ -42,7 +44,6 @@ alias mk='mkdir -pv'
 alias sudo='sudo '
 alias c='clear'
 alias pg='ps -ef | grep'
-alias languagetool='java -jar /home/yancy/tmp/languagetool/languagetool-standalone/target/LanguageTool-5.6-SNAPSHOT/LanguageTool-5.6-SNAPSHOT/languagetool-commandline.jar'
 alias modx='chmod +x '
 alias ssudo='sudo -E env "PATH=$PATH"'
 
@@ -58,8 +59,6 @@ has lazygit && alias lg='lazygit'
 
 # extension aliases
 alias -s txt=nvim
-alias -s md=typora
-alias -s pdf=FoxitReader
 
 # unset some aliases
 # unalias duf

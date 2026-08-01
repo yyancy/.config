@@ -1,8 +1,8 @@
 # ls
-
-alias ll="eza -la"
-alias la="eza -a"
-alias l="eza -l"
+alias l="eza --group-directories-first"
+alias ll="eza --group-directories-first -l"
+alias la="eza --group-directories-first -a"
+alias lla="eza --group-directories-first -l -a"
 
 
 # git

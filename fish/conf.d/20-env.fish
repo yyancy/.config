@@ -13,10 +13,10 @@ set -gx GO111MODULE on
 set -gx GOPATH $HOME/.cache/go
 
 # Proxy — auto-detect local proxy on port 7890 (e.g. clash/v2ray)
-# if ss -tnl 2>/dev/null | grep -q 7890
-#     set -gx http_proxy http://127.0.0.1:7890
-#     set -gx https_proxy http://127.0.0.1:7890
-# end
+if ss -tnl 2>/dev/null | grep -q 7890
+    set -gx http_proxy http://127.0.0.1:7890
+    set -gx https_proxy http://127.0.0.1:7890
+end
 
 # PATH — fish_add_path deduplicates automatically
 fish_add_path $HOME/.local/bin

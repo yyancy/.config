@@ -87,7 +87,7 @@ function a() {
   NAME="$0"
   USAGE="usage: $NAME [install | update | remove] {package}"
   if [ $# -eq 0 ]; then
-    echo $UESGE
+    echo $USAGE
     return 1
   fi
   if [ "$1" != "" ]; then

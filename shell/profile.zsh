@@ -26,10 +26,6 @@ has hstr && {
   export HSTR_TIOCSTI=y
 }
 
-# 21century learning usage
-go_libs="-lm"
-go_flags="-g -Wall -include allheads.h -O3"
-alias go_c="c99 -xc - $go_libs $go_flags"
 
 bindkey '^[' vi-cmd-mode
 
