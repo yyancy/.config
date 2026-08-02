@@ -59,3 +59,8 @@ function fif --description 'search file contents and preview with fzf'
     rg --files-with-matches --no-messages $argv[1] \
         | fzf --preview "rg --ignore-case --pretty --context 10 '$argv[1]' {}"
 end
+
+
+function fp
+    _fzf_search_processes
+end
