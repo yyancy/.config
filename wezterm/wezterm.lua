@@ -44,7 +44,7 @@ config.font = wezterm.font_with_fallback({
 	-- 我的天空
 	-- { family = "Source Han Sans CN", scale = 1.1 },
 })
-
+enable_kitty_keyboard = true
 config.font_rules = {
 	{
 		intensity = "Bold",

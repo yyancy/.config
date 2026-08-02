@@ -120,6 +120,15 @@ function M.setup(config)
 		})
 	end
 
+	-- Ctrl + number 发送 Kitty keyboard protocol
+	for i = 1, 9 do
+		table.insert(config.keys, {
+			key = tostring(i),
+			mods = "CTRL",
+			action = act.SendString(string.format("\x1b[%d;5u", 48 + i)),
+		})
+	end
+
 	if wezterm.target_triple:find("windows") then
 		table.insert(config.keys, {
 			key = "`",
