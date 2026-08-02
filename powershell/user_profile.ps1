@@ -47,7 +47,7 @@ Set-Alias -Name lg -Value lazygit
 Set-Alias -Name g -Value get-git
 Set-Alias -Name gst -Value get-gitstatus
 Set-Alias -Name gpl -Value get-gitpull
-Set-Alias -Name gcc -Value get-gitcommit
+# Set-Alias -Name gcc -Value get-gitcommit
 Set-Alias -Name gcam -Value get-gitcommitam
 Set-Alias -Name grs -Value get-gitrestore
 
@@ -69,4 +69,4 @@ Set-PSReadLineKeyHandler -Key 'Ctrl+e' `
 
 
 # starship enable transient prompt
-Enable-TransientPrompt
+# Enable-TransientPrompt

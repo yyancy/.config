@@ -4,7 +4,8 @@ local act = wezterm.action
 local M = {}
 
 M.mod = wezterm.target_triple:find("windows") and "SHIFT|CTRL" or "SHIFT|SUPER"
-M.switch_mod = wezterm.target_triple:find("windows") and "ALT" or "CTRL|ALT"
+-- M.switch_mod = wezterm.target_triple:find("windows") and "ALT" or "CTRL|ALT"
+M.switch_mod = "CTRL|ALT"
 
 M.smart_split = wezterm.action_callback(function(window, pane)
 	local dim = pane:get_dimensions()
@@ -51,6 +52,8 @@ function M.setup(config)
 		{ mods = M.mod, key = "M", action = act.TogglePaneZoomState },
 		{ mods = M.mod, key = "p", action = act.ActivateCommandPalette },
 		{ mods = M.mod, key = "d", action = act.ShowDebugOverlay },
+		{ key = "w", mods = "ALT", action = act.ScrollToPrompt(-1) },
+		{ key = "w", mods = "ALT|SHIFT", action = act.ScrollToPrompt(1) },
 		{
 			mods = M.mod,
 			key = "u",
