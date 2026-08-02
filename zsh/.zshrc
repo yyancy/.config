@@ -34,8 +34,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 [[ ! -f ${ZDOTDIR:-$HOME/.config/zsh}/.p10k.zsh ]] || source ${ZDOTDIR:-$HOME/.config/zsh}/.p10k.zsh
 
 # User configuration
-if [ -f "$HOME/.config/shell/profile.zsh" ]; then
-  . "$HOME/.config/shell/profile.zsh"
+if [ -f "$HOME/.config/shell/config.zsh" ]; then
+  . "$HOME/.config/shell/config.zsh"
 fi
 
 [[ -f "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local" ]] && source "${ZDOTDIR:-$HOME/.config/zsh}/zshrc.local"

@@ -82,7 +82,7 @@ invert = true
 
 ## use ctrl instead of alt as the shortcut modifier key for numerical UI shortcuts
 ## alt-0 .. alt-9
-# ctrl_n_shortcuts = true
+ctrl_n_shortcuts = true
 
 ## prevent commands matching any of these regexes from being written to history.
 ## Note that these regular expressions are unanchored, i.e. if they don't start

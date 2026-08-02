@@ -38,6 +38,7 @@ yazi/plugins
 zsh/.zcompdump*
 zsh/zshrc.local
 shell/env.local.sh
+shell/local.zsh
 zsh/.zcompcache
 zsh/.zhistory
 zsh/.zsh_history

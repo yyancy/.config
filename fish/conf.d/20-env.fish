@@ -1,5 +1,5 @@
 # Environment variables for fish.
-# Mirrors shell/env.sh — intentional duplication to keep fish config self-contained.
+# Mirrors shell/core/env.sh — intentional duplication to keep fish config self-contained.
 # When updating env vars, update both files.
 
 set -gx EDITOR nvim
