@@ -65,3 +65,8 @@ ulauncher/ext_preferences
 !starship.toml
 !README.md
 !docs/
+
+!karabiner/
+karabiner/automatic_backups/
+karabiner/**/.DS_Store
+
