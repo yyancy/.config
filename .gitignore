@@ -10,6 +10,7 @@
 !fish/config.fish
 !fish/conf.d/
 fish/conf.d/99-local.fish
+fish/conf.d/fzf.fish
 !fish/functions/yy.fish
 # fish/completions/
 !cheatsheets/

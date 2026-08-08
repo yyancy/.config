@@ -18,7 +18,7 @@ end)
 
 ---@param config Config
 function M.setup(config)
-	config.disable_default_key_bindings = true
+	-- config.disable_default_key_bindings = true
 	-- timeout_milliseconds defaults to 1000 and can be omitted
 	config.leader = { key = "z", mods = "ALT", timeout_milliseconds = 1000 }
 
