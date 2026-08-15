@@ -132,7 +132,7 @@ function M.setup(config)
 	if wezterm.target_triple:find("windows") then
 		table.insert(config.keys, {
 			key = "`",
-			mods = "ALT",
+			mods = "ALT|CTRL",
 			action = wezterm.action.ActivateLastTab,
 		})
 	end
