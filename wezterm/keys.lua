@@ -3,7 +3,13 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local M = {}
 
-M.mod = wezterm.target_triple:find("windows") and "SHIFT|CTRL" or "SHIFT|SUPER"
+if wezterm.target_triple:find("windows") then
+	M.mod = "SHIFT|CTRL"
+-- elseif wezterm.target_triple:find("apple") then
+-- 	M.mod = "SHIFT|CTRL"
+else
+	M.mod = "SHIFT|SUPER"
+end
 -- M.switch_mod = wezterm.target_triple:find("windows") and "ALT" or "CTRL|ALT"
 M.switch_mod = "CTRL|ALT"
 
@@ -49,6 +55,7 @@ function M.setup(config)
 		{ mods = M.mod, key = "f", action = act.Search("CurrentSelectionOrEmptyString") },
 		{ mods = M.mod, key = "V", action = act.PasteFrom("Clipboard") },
 		{ mods = "CTRL|SHIFT", key = "V", action = act.PasteFrom("Clipboard") },
+		{ mods = "CMD", key = "v", action = act.PasteFrom("Clipboard") },
 		{ mods = M.mod, key = "M", action = act.TogglePaneZoomState },
 		{ mods = M.mod, key = "p", action = act.ActivateCommandPalette },
 		{ mods = M.mod, key = "d", action = act.ShowDebugOverlay },
