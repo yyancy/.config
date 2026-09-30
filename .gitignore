@@ -71,3 +71,4 @@ ulauncher/ext_preferences
 karabiner/automatic_backups/
 karabiner/**/.DS_Store
 
+!linux-notify.sh
