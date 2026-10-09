@@ -10,16 +10,15 @@ export GO111MODULE="on"
 export GOPATH="$HOME/.cache/go"
 
 # check whether set up a proxy
-ss -tnl | grep 7890 &>/dev/null
-[ $? -eq 0 ] && {
-	export http_proxy=http://127.0.0.1:7890
-	export https_proxy=http://127.0.0.1:7890
-}
+if (($ + commands[ss])) && ss -tnl 2>/dev/null | grep -q ':7890'; then
+  export http_proxy=http://127.0.0.1:7890
+  export https_proxy=http://127.0.0.1:7890
+fi
 
 # Set PATH, MANPATH, etc., for Homebrew.
 test -d /home/linuxbrew/.linuxbrew && {
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-	export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  export FPATH="/home/linuxbrew/.linuxbrew/share/zsh/site-functions:$FPATH"
 }
 
 # add path
